@@ -56,6 +56,7 @@ open class Personnage(
      */
     val pointDeVieMax: Int
         get() = 50 + (10 * (this.endurance))
+
     /**
      * Points de vie actuels du personnage. La valeur est limitée par le nombre maximal de points de vie.
      */
@@ -63,7 +64,6 @@ open class Personnage(
         set(value) {
             field = minOf(value, this.pointDeVieMax)
         }
-
 
 
     fun calculeDefense(): Int {
@@ -108,6 +108,23 @@ open class Personnage(
             return "$nom n'a pas cette arme dans son inventaire."
         }
     }
+
+//    fun afficheArme() {
+//        println("Arme: ${this.nom}") // affiche le nom de l'arme
+//        for (uneArme in this.armeEquipee) {
+//            println("${this.armeEquipee.indexOf(uneArme)} => ${uneArme.nom}") // affiche l'index de l'arme et son nom
+//        }
+//    }
+//    fun choisirArme(personnage: Personnage) { //Invoquer la méthode afficherArme() puis demander à l'utilisateur de choisir une arme.
+//        this.afficheArme()
+//        var choixarme = readln().toInt()
+//        println("choix de l'arme") //l'utilisateur choisis une arme.
+//        this.armeEquipee[choixarme].effet(this, personnage)
+//        for (choixSort in this.armeEquipee) {
+//        }
+//        println("${afficheArme()} choisir ${this.armeEquipee}")
+//    }
+
 
     fun equipe(armure: Armure): String {
         val ligneArmure = this.ligneInventaires.find({ ligneInventaire -> ligneInventaire.item == armure })
@@ -193,8 +210,6 @@ open class Personnage(
         // Retourner le message global décrivant l'action de loot
         return msg
     }
-
-
     /**
      * Méthode permettant d'ajouter une ligne d'inventaire pour un item avec une quantité donnée.
      * Si une ligne d'inventaire pour cet item existe déjà, met à jour la quantité.
@@ -224,8 +239,6 @@ open class Personnage(
             }
         }
     }
-
-
     override fun toString(): String {
         return "$nom (PV: $pointDeVie/$pointDeVieMax, Attaque: $attaque, Défense: $defense, Endurance: $endurance, Vitesse: $vitesse)"
     }

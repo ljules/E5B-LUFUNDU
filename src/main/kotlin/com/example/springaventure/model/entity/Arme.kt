@@ -9,7 +9,7 @@ import jakarta.persistence.*
  * @param description Description de l'arme.
  * @param cheminImage Chemin vers l'image de l'arme.
  * @param qualite Qualité de l'arme (relation ManyToOne).
- * @param typeArme Type d'arme auquel elle appartient (relation ManyToOne).
+ * @param typeArme Type d'arme auxquel elle appartient (relation ManyToOne).
  * @param personnages Liste des personnages équipant cette arme (relation OneToMany).
  */
 @Entity

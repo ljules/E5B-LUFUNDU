@@ -40,4 +40,16 @@ class TypeArme constructor(
     var armes: MutableList<Arme> = mutableListOf()
 ) {
     // Vous pouvez ajouter d'autres méthodes ou propriétés au besoin
+    fun main() {
+        //créer une liste d'armes
+        val armes = listOf("bombe", "Epée", "Sabre",)
+
+        //le toSet() est utiliser pour obtenir uniquement l'ensemble des types d'armes
+        val typesArmes = armes.toSet()
+        //size est utilisé pour obtenir le nombre total de typesArmes
+        val nombreTypesArmes = typesArmes.size
+
+        println("Le nombre total de types d'armes est : $nombreTypesArmes")
+    }
+
 }

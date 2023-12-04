@@ -1,0 +1,6 @@
+B) On souhaite que lors de la création d'un personnage faire en sorte que le joueur puisse choisir une arme parmi la liste de toutes les armes.
+ extrait du code du create de personnage:
+
+
+A
+C
